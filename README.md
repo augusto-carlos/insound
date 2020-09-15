@@ -7,12 +7,12 @@
 </h4>
 
 <h1 align="center">
-  <img alt="inSound" title="#inSound" src="./screenshots/img1.png" width=400 style="margin:5px"/>
-  <img alt="inSound" title="#inSound" src="./screenshots/img2.png" width=400 style="margin:5px"/>
-  <img alt="inSound" title="#inSound" src="./screenshots/img3.png" width=400 style="margin:5px"/>
-  <img alt="inSound" title="#inSound" src="./screenshots/img4.png" width=400 style="margin:5px"/>
-  <img alt="inSound" title="#inSound" src="./screenshots/img5.png" width=400 style="margin:5px"/>
-  <img alt="inSound" title="#inSound" src="./screenshots/img6.png" width=400 style="margin:5px"/>
+  <img alt="inSound" title="#inSound" src="./screenshots/img1.png" style="margin:5px" width=280/>
+  <img alt="inSound" title="#inSound" src="./screenshots/img2.png" style="margin:5px" width=280/>
+  <img alt="inSound" title="#inSound" src="./screenshots/img3.png" style="margin:5px" width=280/>
+  <img alt="inSound" title="#inSound" src="./screenshots/img4.png" style="margin:5px" width=280/>
+  <img alt="inSound" title="#inSound" src="./screenshots/img5.png" style="margin:5px" width=280/>
+  <img alt="inSound" title="#inSound" src="./screenshots/img6.png" style="margin:5px" width=280/>
 </h1>
 
 ### Table of content
