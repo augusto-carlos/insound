@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:insound/controller/app.controller.dart';
+import 'package:insound/controllers/app_controller.dart';
 
 class ToggleTheme extends StatelessWidget {
   @override
@@ -7,7 +7,7 @@ class ToggleTheme extends StatelessWidget {
     return Switch(
         value: AppController.instance.isDark.value,
         onChanged: (value) {
-          AppController.instance.turnToDark(value);
+          AppController.instance.changeTheme();
         });
   }
 }

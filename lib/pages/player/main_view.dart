@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:insound/models/music.model.dart';
+import 'package:insound/models/music_model.dart';
 import 'package:feather_icons_flutter/feather_icons_flutter.dart';
 
 class PlayerPage extends StatefulWidget {
@@ -13,16 +13,14 @@ class PlayerPage extends StatefulWidget {
 }
 
 class _PlayerPageState extends State<PlayerPage> {
-  double uper;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Player'),
           centerTitle: true,
           leading: IconButton(
             icon: Icon(FeatherIcons.arrowLeft),
-            onPressed: () => Navigator.pop(context),
+            onPressed: () => Navigator.pushNamed(context, "/home"),
           ),
           actions: <Widget>[
             PopupMenuButton(
@@ -59,7 +57,18 @@ class _PlayerPageState extends State<PlayerPage> {
                 height: 360,
                 margin: EdgeInsets.only(top: 50),
                 decoration: BoxDecoration(
-                  color: Colors.white.withAlpha(15),
+                  border: Border.all(
+                    color: Colors.grey.withOpacity(0.2),
+                    style: BorderStyle.solid,
+                    width: 1,
+                  ),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withAlpha(14),
+                      blurRadius: 07.0,
+                    ),
+                  ],
+                  color: Color(0x11FFFFFF),
                   shape: BoxShape.circle,
                 ),
               ),
@@ -92,13 +101,17 @@ class _PlayerPageState extends State<PlayerPage> {
                 child: Row(
                   children: <Widget>[
                     IconButton(
+                      iconSize: 36,
+                      icon: Icon(Icons.repeat_one),
+                      onPressed: () {},
+                    ),
+                    IconButton(
                       iconSize: 40,
                       icon: Icon(FeatherIcons.skipBack),
                       onPressed: () {},
                     ),
                     IconButton(
-                      iconSize: 60,
-                      color: Colors.accents.first,
+                      iconSize: 80,
                       icon: Icon(FeatherIcons.pauseCircle),
                       onPressed: () {},
                     ),
@@ -107,11 +120,19 @@ class _PlayerPageState extends State<PlayerPage> {
                       icon: Icon(FeatherIcons.skipForward),
                       onPressed: () {},
                     ),
+                    IconButton(
+                      iconSize: 30,
+                      color: widget.music.favorited ? Colors.pink : Colors.grey,
+                      icon: Icon(FeatherIcons.heart),
+                      onPressed: () => setState(() {
+                        widget.music.favorited = !widget.music.favorited;
+                      }),
+                    ),
                   ],
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   crossAxisAlignment: CrossAxisAlignment.center,
                 ),
-                width: 370,
+                padding: EdgeInsets.symmetric(horizontal: 4),
               )
             ],
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
