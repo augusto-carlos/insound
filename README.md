@@ -7,7 +7,7 @@
 </h4>
 
 <h1 align="center">
-  <img alt="inSound" title="#inSound" src="./screenshots/poster.png" />
+  <img alt="inSound" title="#inSound" src="./assets/images/poster.png" />
 </h1>
 
 ### Table of content
